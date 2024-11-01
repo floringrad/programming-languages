@@ -917,35 +917,177 @@ console.log("I will probably need a " + umbrella.description + ".");
 // ==========================================
 // Modules
 
-// Before Modules, all functions defined on the window object are global.
+// ----------------
+// Before JS modules,
+// all functions defined on the window object are global.
 // Then came along ServerJS (renamed CommonJS), but Require or Module.exports created for
 // nodejs is not understood by the browsers.
 // Then ES6 modules arrived :-)
 
 // Before modules
 // in HTML
-// in the <body> section
-// <script type="text/javascript">
-//   console.log("Hello from script tag");
-// </script>
-// <script>
-//   console.log("The text/javascript is the default value,");
-//   console.log("so we don't even have to use it with the script tag.");
-//   console.log("It is implied.");
-// </script>
+// <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//     <title>Regular script</title>
+//   </head>
+//   <body>
+//     Regular, "old school", JS script.
+//     <script type="text/javascript">
+//       console.log("Hello from script tag");
+//     </script>
+//     <script>
+//       console.log("The text/javascript is the default value.");
+//       console.log("So we do not even have to use it with the script tag.");
+//       console.log("It is implied.");
+//     </script>
+//   </body>
+// </html>
 
+// -----------------------
 // JS scripts as modules
-// make sure to run a local http server to avoid the CORS error message
+
+// Make sure to run a local http server to avoid the CORS error message
 // in HTML
-// in the <body> section, add
-// <script type="module">
-//   import { informalGreeting } from './greeting.js';
-//   informalGreeting('Jane');
-// </script>
-// <script type="module">
-//   import { informalGreeting, formalGreeting } from './greeting.js';
-//   import greeting from './greeting.js';
-//   informalGreeting('Liz');
-//   formalGreeting('John');
-//   greeting();
-// </script>
+// <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//     <title>ES6 modules script</title>
+//   </head>
+//   <body>
+//     JS scripts as modules.
+//     <script type="module">
+//       import { informalGreeting } from "./greetings.js";
+//       informalGreeting("Jane");
+//     </script>
+//     <script type="module">
+//       import { informalGreeting, formalGreeting } from "./greetings.js";
+//       import greeting from "./greetings.js";
+//       formalGreeting("John");
+//       greeting();
+//     </script>
+//   </body>
+// </html>
+
+// in the greetings.js file
+// export const informalGreeting = (name) => {
+//   console.log("Hello, " + name + "!");
+// };
+
+// export const formalGreeting = (name) => {
+//   console.log("Good day, " + name + "!");
+// };
+
+// export const greeting = () => {
+//   console.log("Howdy!");
+// };
+
+// export default greeting;
+
+// ==========================
+// Working with the browser
+
+// -----------------------------
+// Interactive DOM manipulation
+
+// - Open the DevTools
+// - Hit 'escape' to focus on the Console
+
+// Replaces the body contents
+// document.body.innerText = "Hello World!";
+
+// - Add an h2 element to the page
+// with the id='sub-heading' and
+// with the class='secondary'
+// const h2 = document.createElement('h2');
+// h2.innerText = 'New paragraph';
+// h2.setAttribute('id', 'sub-heading');
+// document.body.appendChild(h2);
+
+// querySelector
+// Find and element, here a paragraph
+// document.querySelector('p');
+
+// Find all elements, here paragraphs
+// document.querySelectorAll('p');
+
+// Find an element by 'id'
+// document.getElementById('sub-heading');
+
+// Find elements by 'class'
+// document.getElementsByClassName('secondary');
+// returns a collection
+
+// -------
+// Events
+
+// User-triggered events
+// Example: a button
+// <button type="button" class="btn btn-lg btn-primary" onclick="clickHandler()">
+//   Primary button
+// </button>;
+
+// -----------------------
+// Event Listeners
+
+// In DevTools
+
+// First method
+// target = document.querySelector('body');
+// function handleClick(){
+//   console.log("Body clicked");
+// }
+// target.addEventListener('click', handleClick);
+
+// Second method
+// In console
+// function handleClick2() {
+//   console.log("Heading clicked");
+// }
+// In the Elements tab
+// Click on an element, here h1
+// Edit as HTML, then add an attribute
+// <h1 onclick="handleClick2()">Example Domain</h1>
+
+// -----------
+// User Input
+
+// the built-in prompt() method
+
+// let answer = prompt('What is your name?');
+// if (typeof(answer) === 'string') {
+//     var h1 = document.createElement('h1')
+//     h1.innerText = answer;
+//     document.body.innerText = '';
+//     document.body.appendChild(h1);
+// }
+
+// the form method
+// this is more robust
+
+// var h1 = document.createElement('h1');
+// h1.innerText = "Type into the input to make this text change";
+
+// var input = document.createElement('input');
+// input.setAttribute('type', 'text');
+
+// document.body.innerText = '';
+// document.body.appendChild(h1);
+// document.body.appendChild(input);
+
+// input.addEventListener('change', function() {
+//   console.log(input.value)
+// })
+
+// input.addEventListener('change', function() {
+//   h1.innerText = input.value
+// })
+
+// =====
+// JSON
