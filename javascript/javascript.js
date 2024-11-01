@@ -1091,3 +1091,73 @@ console.log("I will probably need a " + umbrella.description + ".");
 
 // =====
 // JSON
+
+// Only a subset of values in JavaScript can be properly stringified to JSON and parsed from a JavaScript object into a JSON string.
+// These values include:
+
+// - primitive values: strings, numbers, booleans, null
+// - complex values: objects and arrays (no functions!)
+// - Objects have double-quoted strings for all keys
+// - Properties are comma-delimited both in JSON objects and in JSON arrays, just like in regular JavaScript code
+// - String properties must be surrounded in double quotes.
+// - Number properties are represented using the regular JavaScript number syntax
+// - Boolean properties are represented using the regular JavaScript boolean syntax
+// - Null as a property is the same as in regular JavaScript
+
+// You can use object literals and array literals, as long as you follow the above rules
+
+// What happens if you try to stringify a data type which is not accepted in JSON syntax?
+// For example, what if you try to stringify a function? The operation will silently fail.
+
+// If you try to stringify some other data types, such as a BigInt number, say 123n, you'd get the following error:
+// Uncaught TypeError: Do not know how to serialize a BigInt.
+
+// Some examples of JSON strings:
+// '{"color":"red"}'
+
+// '{"color":"red", "nestedObject": { "color": "blue" } }'
+// The above JSON object encodes two properties:
+// - "color":"red"
+// - "nestedObject": { "color": "blue" }
+
+// It's also possible to have a JSON string encoding just an array:
+// '["one", "two", "three"]'
+// The above JSON string encodes an array holding three items, three values
+// of the string data type. Obviously, just like objects, arrays can nest other simple or complex data structures.
+// For example:
+// '[{ "color": "blue" }, {"color: "red"}]'
+
+// --------------------------------------
+// Convert a JSON string into an object
+// the JSON.parse() method
+
+// In DevTools
+// ('{ "greeting": "hello" }'); // is just a string
+// const jsonStr = '{ "greeting": "hello" }';
+// const jsonPlainObj = JSON.parse(jsonStr);
+// console.log(jsonPlainObj.greeting); // hello
+// jsonPlainObj.greeting = 'hi';
+
+// We can also go the other way around
+
+// --------------------------------------
+// Convert an object into a JSON string
+// the JSON.stringify() method
+
+// const data = {
+//   firstName: "Joe",
+//   lastName: "Doe",
+//   greeting: "Hello",
+// };
+
+// JSON.stringify(data);
+
+// Note
+// the JSON string will not contain functions, the methods are omitted
+// it uses double quotes
+
+// ==============
+// Node and npm
+
+// npm init
+// creates a package.json file
