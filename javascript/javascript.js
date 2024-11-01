@@ -1161,3 +1161,191 @@ console.log("I will probably need a " + umbrella.description + ".");
 
 // npm init
 // creates a package.json file
+
+// =========
+// Testing
+
+// example
+// function concatStrings (strA, strB) {
+//   return  strA + strB;
+// }
+
+// ----------------
+// Adding comments
+// First step is adding comments about code expectations
+// It's not enough, too permissive
+
+// -------------------
+// Testing frameworks
+
+// Tests as expectation-documenting code
+// Tests are also callable, I can run tests to see if the expectations are met.
+
+// For example, in the JEST testing framework, I can write:
+// expect(concatStrings ("abc", "def)).toBe("abcdef");
+
+// Testing JavaScript code ensures:
+// - Conciseness // straightforward and to the point
+// - Clarity // we know exactly what arguments we are providing
+// - Repeatability // we can run it again and again
+
+// We say that tests are 'red', if they fail or
+// that they are 'green', if they pass.
+
+// =============
+// Refactoring
+
+// The process in which I rewrite my code so it runs more efficiently
+// or it's more readable, thus more easily to understand to other
+// programmers on the team, thus more maintainable
+
+// Red-green-refactor cycle
+// This cycle is the basis of Test-Driven Development (TDD)
+
+// -----------------
+// Types of testing
+
+// - End-to-end (e2e)
+// - Integration
+// - Unit
+
+// ------------
+// e2e testing
+
+// Tests how a user might interact with your app
+// they are the slowest and take the more time to set up and run
+
+// Frameworks e2e
+// - WebdriverJS
+// - Protractor
+// - Cypress
+
+// --------------------
+// Integration testing
+
+// Tests how parts of the system interact with other parts of the system
+// Tests how several parts of the app work together
+// they are faster and cheaper than e2e but as cheap as Unit tests
+
+// Frameworks for Integration testing
+// - React Testing Library
+// - Enzyme
+
+// -------------
+// Unit testing
+
+// Unit testing is testing the smallest unit of source code, in isolation,
+// preferably separate from the rest of the app.
+// Example: functions or methods.
+// Unit tests are self-contained
+// This make Unit tests fast to run and easy to write.
+
+// ----------------------------
+// Three-level testing pyramid
+// - at the base of the pyramid: unit tests, the highest speed and the lowest cost.
+// - at the center of the pyramid: integration tests
+// - at the top of the pyramid: e2e
+
+// -------------------
+// Testing Frameworks
+// Jasmine, Mocha, Karma, qUnit, Jest
+
+// -----------------------
+// The Jest testing framework
+
+// It's built by Meta
+// It's JavaScript-based
+
+// It allows to test:
+// - React
+// - Babel
+// - TypeScript
+// - Node
+// - Angular
+// - Vue
+
+// It also supports:
+// - code-coverage
+// It's expressed in percentages, the more coverage, the better.
+
+// - mocking
+// It allows to separate the code that you are testing from the related dependencies.
+// It makes sure the Unit testing is stand alone.
+// In some cases mocking allows to ship features faster.
+// In Jest you can use mocking without additional installations, simply by using in-built
+// Jest mocking functions.
+// It's also easy to test asynchronous code
+
+// - snapshot testing
+// Used for testing that there are no regressions in the DOM of the app after some changes
+// to the code base are made.
+
+// -----------
+// Using Jest
+
+// --------------------------
+// Create a function addFive
+
+// Let's say we have a file addFive.js
+// function addFive(val) {
+//   return val + 5;
+// }
+// module.exports = addFive;
+
+// -----------------------------
+// We want to test the function
+
+// --------------------------------------
+// We need to install the Jest framework
+
+// npm init -y
+// This creates a package.json file like the following:
+
+// {
+//   "name": "javascript",
+//   "version": "1.0.0",
+//   "description": "To install dependencies:",
+//   "main": "javascript.js",
+//   "scripts": {
+//     "test": "echo \"Error: no test specified\" && exit 1"
+//   },
+//   "keywords": [],
+//   "author": "",
+//   "license": "ISC"
+// }
+
+// npm install --save-dev jest
+// this creates a dev dependency in package.json
+
+// ----------------------
+// We create a test file
+// addFive.test.js
+
+// const { default: TestRunner } = require("jest-runner");
+// const addFive = require("./addFive");
+
+// test("returns the number plus 5", () => {
+//   expect(addFive(1)).toBe(6);
+// });
+
+// -------------
+// Run the test
+
+// npm run test
+
+// we get a result like the following
+// > javascript@1.0.0 test
+// > jest
+
+//  PASS  ./addFive.test.js
+//   ✓ returns the number plus 5 (3 ms)
+
+// Test Suites: 1 passed, 1 total
+// Tests:       1 passed, 1 total
+// Snapshots:   0 total
+// Time:        0.315 s, estimated 1 s
+// Ran all test suites.
+
+// Note
+// We could use Bun instead of npm but the package.json will not be the same
+// as Bun is focused on TypeScript
