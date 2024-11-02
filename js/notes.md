@@ -1,12 +1,12 @@
-// Revisit JavaScript
+# JavaScript
 
 // ==========================================
 //1. Comments
 
 // One-lined comment, self-explanatory
-/* Several-lined
+/_ Several-lined
 comments
-are back! */
+are back! _/
 
 // ==========================================
 //2. Strict mode
@@ -42,9 +42,9 @@ are back! */
 // 4.2.2 Try, catch blocks
 
 // try {
-//   console.log(a + b);
+// console.log(a + b);
 // } catch (err) {
-//   console.log(err);
+// console.log(err);
 // }
 // console.log("This line now runs");
 
@@ -52,9 +52,9 @@ are back! */
 // No need to have an error, we can throw one
 
 // try {
-//   throw new Error("Oops! an error");
+// throw new Error("Oops! an error");
 // } catch (err) {
-//   console.log(err);
+// console.log(err);
 // }
 // console.log("This line now runs");
 
@@ -73,16 +73,16 @@ are back! */
 // They behave as var-declared
 
 function iLearn(language) {
-  console.log("This week I practice " + language + ".");
+console.log("This week I practice " + language + ".");
 }
 iLearn("JavaScript");
 
 // In the catch declaration here below
 // err is block-scoped as if it had been declared with let
 // try {
-//   someError();
+// someError();
 // } catch (err) {
-//   console.log(err);
+// console.log(err);
 // }
 
 // The let keyword has some differences to var, with the most obvious being that
@@ -123,7 +123,7 @@ var greeting = "Hello, World!";
 
 // It's a template string known as template literal.
 // `Hello, World!` // with backticks
-//  With template literals, an expression can be embedded in a placeholder.
+// With template literals, an expression can be embedded in a placeholder.
 // A placeholder is represented by ${}, with anything within the curly brackets
 // treated as JavaScript and anything outside the brackets treated as a string:
 
@@ -168,16 +168,16 @@ console.log(`First programs usually print: ${greeting}`);
 // rather than by its numeric position (as with arrays)
 
 var lastTravel = {
-  country: "Netherlands",
-  capital: "Amsterdam",
-  favoriteMuseums: ["Van Gogh", "Rembrandt", "Rijksmuseum"],
-  transportUsed: "bus",
-  transportHours: 4,
+country: "Netherlands",
+capital: "Amsterdam",
+favoriteMuseums: ["Van Gogh", "Rembrandt", "Rijksmuseum"],
+transportUsed: "bus",
+transportHours: 4,
 };
 
 // Dot notation and bracket notation
 console.log(
-  "The capital of " + lastTravel.country + " is " + lastTravel["capital"] + "."
+"The capital of " + lastTravel.country + " is " + lastTravel["capital"] + "."
 );
 
 // -----------------------------------
@@ -187,12 +187,12 @@ console.log(
 
 // const result = [];
 // const drone = {
-//   speed: 100,
-//   color: "yellow",
+// speed: 100,
+// color: "yellow",
 // };
 // const droneKeys = Object.keys(drone);
 // droneKeys.forEach(function (key) {
-//   result.push(key, drone[key]);
+// result.push(key, drone[key]);
 // });
 // console.log(result);
 
@@ -217,7 +217,7 @@ console.log(
 // It can also be used with functions
 
 // function addTaxToPrices(taxRate, ...itemsBought) {
-//   return itemsBought.map((item) => taxRate * item);
+// return itemsBought.map((item) => taxRate \* item);
 // }
 
 // let shoppingChart = addTaxToPrices(1.1, 46, 89, 35, 79);
@@ -257,8 +257,8 @@ console.log(
 // Copy either an object or an array into a separate one
 
 // const car1 = {
-//   speed: 200,
-//   color: "yellow",
+// speed: 200,
+// color: "yellow",
 // };
 // const car2 = { ...car1 };
 // car1.speed = 201;
@@ -337,11 +337,11 @@ seasons.pop();
 // Methods existing on arrays
 
 // -----------
-//  forEach()
+// forEach()
 
 // const fruits = ["kiwi", "mango", "apple", "pear"];
 // function appendIndex(fruit, index) {
-//   console.log(`${index}. ${fruit}`);
+// console.log(`${index}. ${fruit}`);
 // }
 // fruits.forEach(appendIndex);
 
@@ -350,7 +350,7 @@ seasons.pop();
 
 // const veggies = ["onion", "garlic", "potato"];
 // veggies.forEach(function (veggie, index) {
-//   console.log(`${index}. ${veggie}`);
+// console.log(`${index}. ${veggie}`);
 // });
 
 // ---------
@@ -361,7 +361,7 @@ seasons.pop();
 
 // const numbers = [0, 10, 20, 30, 40, 50];
 // numbers.filter(function (num) {
-//   return num > 20;
+// return num > 20;
 // });
 
 // ------
@@ -372,7 +372,7 @@ seasons.pop();
 // <to the map as a parameter.
 
 // [0, 10, 20, 30, 40, 50].map(function (num) {
-//   return num / 10;
+// return num / 10;
 // });
 
 // ------------------------------------------
@@ -394,8 +394,8 @@ seasons.pop();
 // 5.2.2.5 Math object
 
 // Number constants
-// Math.PI;  // 3.14159
-// Math.E;   // 2.718
+// Math.PI; // 3.14159
+// Math.E; // 2.718
 // Math.LN2; // 0.693
 
 // Rounding methods
@@ -437,7 +437,7 @@ seasons.pop();
 // here below the variable's type is function
 
 var seasonsMood = function howIFeelAbout(season) {
-  return `I love ${season}.`;
+return `I love ${season}.`;
 };
 
 console.log(seasonsMood(seasons[2]));
@@ -487,7 +487,7 @@ console.log(seasonsMood(seasons[2]));
 // A side-effect is any instance where a function makes a change outside of itself.
 // This includes:
 // - changing variable values outside of the function itself,
-//   or even relying on outside variables
+// or even relying on outside variables
 // - calling a Browser API (even the console itself!)
 // - calling Math.random() - since the value cannot be reliably repeated
 
@@ -504,9 +504,9 @@ console.log(seasonsMood(seasons[2]));
 // Classes
 
 // class ShoppingItem {
-//   constructor() {
+// constructor() {
 //
-//   }
+// }
 // }
 
 // 'constructor' is a special function inside the ShoppingItem class.
@@ -515,15 +515,15 @@ console.log(seasonsMood(seasons[2]));
 // The 'this' keyword is the future object instance of the ShoppingItem class.
 
 class ShoppingItem {
-  constructor(title, description, price) {
-    this.title = title;
-    this.description = description;
-    this.price = price;
-  }
+constructor(title, description, price) {
+this.title = title;
+this.description = description;
+this.price = price;
+}
 
-  item_status() {
-    return "The item is new!";
-  }
+item_status() {
+return "The item is new!";
+}
 }
 
 const umbrella = new ShoppingItem("umbrella", "foldable umbrella", 20);
@@ -536,13 +536,13 @@ console.log("I will probably need a " + umbrella.description + ".");
 // objects of our classes.
 
 // class ShoppingArticle {
-//   /* ...class code here... */
+// /_ ...class code here... _/
 // }
 // var tShirt = Object.create(ShoppingArticle);
 // console.log(tShirt);
 
-// A more common method of creating objects from classes is to use the new  keyword.
-//  When using a default or empty constructor method, JavaScript implicitly calls
+// A more common method of creating objects from classes is to use the new keyword.
+// When using a default or empty constructor method, JavaScript implicitly calls
 // the Object superclass to create the instance.
 
 // var pants = new ShoppingArticle();
@@ -555,11 +555,11 @@ console.log("I will probably need a " + umbrella.description + ".");
 // - inheritance
 
 // It works like this:
-//   1. There is a base class of a "thing".
-//   2. There is one or more sub-classes of "things" that inherit the properties
-//      of the base class (sometimes also referred to as the "super-class")
-//   3. There might be some other sub-sub-classes of "things" that inherit from those classes
-//      in point 2.
+// 1. There is a base class of a "thing".
+// 2. There is one or more sub-classes of "things" that inherit the properties
+// of the base class (sometimes also referred to as the "super-class")
+// 3. There might be some other sub-sub-classes of "things" that inherit from those classes
+// in point 2.
 
 // Note that each sub-class inherits from its super-class.
 // In turn, a sub-class might also be a super-class, if there are classes inheriting
@@ -568,7 +568,7 @@ console.log("I will probably need a " + umbrella.description + ".");
 // Example:
 // 1. There is a base class of "ShoppingArticle".
 // 2. There is another class, a sub-class inheriting from "ShoppingArticle",
-//     and the name of this class is "ShoppingSpice".
+// and the name of this class is "ShoppingSpice".
 // 3. Next, there is another class, inheriting from "ShoppingSpice", and this class is "Pepper".
 
 // Thus, in the above example, I'm modelling objects from the real world by constructing
@@ -579,9 +579,9 @@ console.log("I will probably need a " + umbrella.description + ".");
 // To setup the inheritance relation between classes in JavaScript,
 // I can use the extends keyword, as in class B extends A.
 
-// class ShoppingArticle { /* ...class code here... */ }
-// class ShoppingSpice extends ShoppingArticle { /* ...class code here... */ }
-// class Pepper extends ShoppingSpice { /* ...class code here... */ }
+// class ShoppingArticle { /_ ...class code here... _/ }
+// class ShoppingSpice extends ShoppingArticle { /_ ...class code here... _/ }
+// class Pepper extends ShoppingSpice { /_ ...class code here... _/ }
 
 // ----------
 // Prototype
@@ -591,9 +591,9 @@ console.log("I will probably need a " + umbrella.description + ".");
 // And that's why we says that Javascript implements a Prototypal inheritance model.
 
 // var bird = {
-//   hasWings: true,
-//   canFly: true,
-//   hasFeathers: true,
+// hasWings: true,
+// canFly: true,
+// hasFeathers: true,
 // };
 
 // var eagle1 = Object.create(bird); // bird is the prototype
@@ -622,9 +622,9 @@ console.log("I will probably need a " + umbrella.description + ".");
 
 // Difference between encapsulation and abstraction
 // - An abstraction is about extracting the concept of what you're trying to do, rather than
-//   dealing with a specific manifestation of that concept.
+// dealing with a specific manifestation of that concept.
 // - Encapsulation is about you not having access to, or not being concerned with,
-//   how some implementation works internally.
+// how some implementation works internally.
 
 // ----------------
 // - polymorphism
@@ -634,28 +634,28 @@ console.log("I will probably need a " + umbrella.description + ".");
 
 // Example 1 :
 // - A door has a bell. It could be said that the bell is a property of the door object.
-//   This bell can be rung. When would someone ring a bell on the door? Obviously, to get
-//   someone to show up at the door.
+// This bell can be rung. When would someone ring a bell on the door? Obviously, to get
+// someone to show up at the door.
 // - Now consider a bell on a bicycle. A bicycle has a bell. It could be said that the bell
-//   is a property of the bicycle object. This bell could also be rung. However, the reason,
-//   the intention, and the result of somebody ringing the bell on a bicycle is not the same
-//   as ringing the bell on a door.
+// is a property of the bicycle object. This bell could also be rung. However, the reason,
+// the intention, and the result of somebody ringing the bell on a bicycle is not the same
+// as ringing the bell on a door.
 
 // In JavaScript:
 // const bicycle = {
-//   bell: function() {
-//       return "Ring, ring! Watch out, please!"
-//   }
+// bell: function() {
+// return "Ring, ring! Watch out, please!"
+// }
 // }
 // const door = {
-//   bell: function() {
-//       return "Ring, ring! Come here, please!"
-//   }
+// bell: function() {
+// return "Ring, ring! Come here, please!"
+// }
 // }
 
 // Io make this code truly polymorphic, I will add another function declaration:
 // function ringTheBell(thing) {
-//   console.log(thing.bell())
+// console.log(thing.bell())
 // }
 
 // ringTheBell(bicycle); // Ring, ring! Watch out, please!
@@ -674,20 +674,20 @@ console.log("I will probably need a " + umbrella.description + ".");
 
 // Code:
 // class Bird {
-//   useWings() {
-//       console.log("Flying!")
-//   }
+// useWings() {
+// console.log("Flying!")
+// }
 // }
 // class Eagle extends Bird {
-//   useWings() {
-//       super.useWings()
-//       console.log("Barely flapping!")
-//   }
+// useWings() {
+// super.useWings()
+// console.log("Barely flapping!")
+// }
 // }
 // class Penguin extends Bird {
-//   useWings() {
-//       console.log("Diving!")
-//   }
+// useWings() {
+// console.log("Diving!")
+// }
 // }
 // var baldEagle = new Eagle();
 // var kingPenguin = new Penguin();
@@ -755,9 +755,9 @@ console.log("I will probably need a " + umbrella.description + ".");
 // For -0 comparison, use the Object.is(..) utility
 
 // But
-// [ 1, 2, 3 ] === [ 1, 2, 3 ];    // false
-// { a: 42 } === { a: 42 }         // false
-// (x => x * 2) === (x => x * 2)   // false
+// [ 1, 2, 3 ] === [ 1, 2, 3 ]; // false
+// { a: 42 } === { a: 42 } // false
+// (x => x _ 2) === (x => x _ 2) // false
 
 // JS does not define === as structural equality for object values.
 // Instead, === uses identity equality for object values
@@ -767,13 +767,13 @@ console.log("I will probably need a " + umbrella.description + ".");
 // var x = [ 1, 2, 3 ];
 
 // assignment is by reference-copy, so
-// y references the *same* array as x,
+// y references the _same_ array as x,
 // not another copy of it.
 // var y = x;
 
-// y === x;              // true
-// y === [ 1, 2, 3 ];    // false
-// x === [ 1, 2, 3 ];    // false
+// y === x; // true
+// y === [ 1, 2, 3 ]; // false
+// x === [ 1, 2, 3 ]; // false
 
 // JS does not provide a mechanism for structural equality comparison of object values,
 // only reference identity comparison.
@@ -819,11 +819,11 @@ console.log("I will probably need a " + umbrella.description + ".");
 // If, else if, else statements
 
 // if (seasons[0] == "summer") {
-//   console.log("It's not the right order.");
+// console.log("It's not the right order.");
 // } else if (seasons[0] == "spring") {
-//   console.log("The first season is Spring, \nThat's a good start!");
+// console.log("The first season is Spring, \nThat's a good start!");
 // } else {
-//   console.log("Still not the right order!");
+// console.log("Still not the right order!");
 // }
 
 // ------------------------------------------
@@ -833,7 +833,7 @@ console.log("I will probably need a " + umbrella.description + ".");
 // For
 
 // for (var cpt = 0; cpt < seasons.length; cpt++) {
-//   console.log(seasons[cpt]);
+// console.log(seasons[cpt]);
 // }
 
 // -------
@@ -851,21 +851,21 @@ console.log("I will probably need a " + umbrella.description + ".");
 // A for of loop cannot work on an object directly, since an object is not iterable.
 
 // const car = {
-//   speed: 100,
-//   color: "blue"
+// speed: 100,
+// color: "blue"
 // }
 
 // The following will throw an error: car is not iterable
 
 // for(prop of car) {
-//   console.log(prop)
+// console.log(prop)
 // }
 
 // Contrary to objects, arrays are iterable.
 
 // const colors = ["red", "orange", "yellow"];
 // for (var color of colors) {
-//   console.log(color);
+// console.log(color);
 // }
 
 // Note:
@@ -876,33 +876,33 @@ console.log("I will probably need a " + umbrella.description + ".");
 // Object.keys(), Object.values(), and Object.entries().
 
 // const car2 = {
-//   speed: 200,
-//   color: "red"
+// speed: 200,
+// color: "red"
 // }
 // console.log(Object.keys(car2)); // ['speed','color']
 
 // const car3 = {
-//   speed: 300,
-//   color: "yellow"
+// speed: 300,
+// color: "yellow"
 // }
 // console.log(Object.values(car3)); // [300, 'yellow']
 
 // const car4 = {
-//   speed: 400,
-//   color: 'magenta'
+// speed: 400,
+// color: 'magenta'
 // }
 // console.log(Object.entries(car4)); // [ ['speed', 400], ['color', 'magenta'] ]
 
 // So, in conclusion:
 // var clothingItem = {
-//   price: 50,
-//   color: 'beige',
-//   material: 'cotton',
-//   season: 'autumn'
+// price: 50,
+// color: 'beige',
+// material: 'cotton',
+// season: 'autumn'
 // }
 
 // for( const key of Object.keys(clothingItem) ) {
-//   console.log(key, ":", clothingItem[key])
+// console.log(key, ":", clothingItem[key])
 // }
 
 // ------
@@ -910,8 +910,8 @@ console.log("I will probably need a " + umbrella.description + ".");
 
 // var cpt = 0;
 // while (cpt < seasons.length) {
-//   console.log(seasons[cpt]);
-//   cpt += 1;
+// console.log(seasons[cpt]);
+// cpt += 1;
 // }
 
 // ==========================================
@@ -928,23 +928,23 @@ console.log("I will probably need a " + umbrella.description + ".");
 // in HTML
 // <!DOCTYPE html>
 // <html lang="en">
-//   <head>
-//     <meta charset="UTF-8" />
-//     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-//     <title>Regular script</title>
-//   </head>
-//   <body>
-//     Regular, "old school", JS script.
-//     <script type="text/javascript">
-//       console.log("Hello from script tag");
-//     </script>
-//     <script>
-//       console.log("The text/javascript is the default value.");
-//       console.log("So we do not even have to use it with the script tag.");
-//       console.log("It is implied.");
-//     </script>
-//   </body>
+// <head>
+// <meta charset="UTF-8" />
+// <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+// <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+// <title>Regular script</title>
+// </head>
+// <body>
+// Regular, "old school", JS script.
+// <script type="text/javascript">
+// console.log("Hello from script tag");
+// </script>
+// <script>
+// console.log("The text/javascript is the default value.");
+// console.log("So we do not even have to use it with the script tag.");
+// console.log("It is implied.");
+// </script>
+// </body>
 // </html>
 
 // -----------------------
@@ -954,38 +954,38 @@ console.log("I will probably need a " + umbrella.description + ".");
 // in HTML
 // <!DOCTYPE html>
 // <html lang="en">
-//   <head>
-//     <meta charset="UTF-8" />
-//     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-//     <title>ES6 modules script</title>
-//   </head>
-//   <body>
-//     JS scripts as modules.
-//     <script type="module">
-//       import { informalGreeting } from "./greetings.js";
-//       informalGreeting("Jane");
-//     </script>
-//     <script type="module">
-//       import { informalGreeting, formalGreeting } from "./greetings.js";
-//       import greeting from "./greetings.js";
-//       formalGreeting("John");
-//       greeting();
-//     </script>
-//   </body>
+// <head>
+// <meta charset="UTF-8" />
+// <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+// <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+// <title>ES6 modules script</title>
+// </head>
+// <body>
+// JS scripts as modules.
+// <script type="module">
+// import { informalGreeting } from "./greetings.js";
+// informalGreeting("Jane");
+// </script>
+// <script type="module">
+// import { informalGreeting, formalGreeting } from "./greetings.js";
+// import greeting from "./greetings.js";
+// formalGreeting("John");
+// greeting();
+// </script>
+// </body>
 // </html>
 
 // in the greetings.js file
 // export const informalGreeting = (name) => {
-//   console.log("Hello, " + name + "!");
+// console.log("Hello, " + name + "!");
 // };
 
 // export const formalGreeting = (name) => {
-//   console.log("Good day, " + name + "!");
+// console.log("Good day, " + name + "!");
 // };
 
 // export const greeting = () => {
-//   console.log("Howdy!");
+// console.log("Howdy!");
 // };
 
 // export default greeting;
@@ -1030,7 +1030,7 @@ console.log("I will probably need a " + umbrella.description + ".");
 // User-triggered events
 // Example: a button
 // <button type="button" class="btn btn-lg btn-primary" onclick="clickHandler()">
-//   Primary button
+// Primary button
 // </button>;
 
 // -----------------------
@@ -1041,14 +1041,14 @@ console.log("I will probably need a " + umbrella.description + ".");
 // First method
 // target = document.querySelector('body');
 // function handleClick(){
-//   console.log("Body clicked");
+// console.log("Body clicked");
 // }
 // target.addEventListener('click', handleClick);
 
 // Second method
 // In console
 // function handleClick2() {
-//   console.log("Heading clicked");
+// console.log("Heading clicked");
 // }
 // In the Elements tab
 // Click on an element, here h1
@@ -1062,10 +1062,10 @@ console.log("I will probably need a " + umbrella.description + ".");
 
 // let answer = prompt('What is your name?');
 // if (typeof(answer) === 'string') {
-//     var h1 = document.createElement('h1')
-//     h1.innerText = answer;
-//     document.body.innerText = '';
-//     document.body.appendChild(h1);
+// var h1 = document.createElement('h1')
+// h1.innerText = answer;
+// document.body.innerText = '';
+// document.body.appendChild(h1);
 // }
 
 // the form method
@@ -1082,11 +1082,11 @@ console.log("I will probably need a " + umbrella.description + ".");
 // document.body.appendChild(input);
 
 // input.addEventListener('change', function() {
-//   console.log(input.value)
+// console.log(input.value)
 // })
 
 // input.addEventListener('change', function() {
-//   h1.innerText = input.value
+// h1.innerText = input.value
 // })
 
 // =====
@@ -1145,9 +1145,9 @@ console.log("I will probably need a " + umbrella.description + ".");
 // the JSON.stringify() method
 
 // const data = {
-//   firstName: "Joe",
-//   lastName: "Doe",
-//   greeting: "Hello",
+// firstName: "Joe",
+// lastName: "Doe",
+// greeting: "Hello",
 // };
 
 // JSON.stringify(data);
@@ -1167,7 +1167,7 @@ console.log("I will probably need a " + umbrella.description + ".");
 
 // example
 // function concatStrings (strA, strB) {
-//   return  strA + strB;
+// return strA + strB;
 // }
 
 // ----------------
@@ -1288,7 +1288,7 @@ console.log("I will probably need a " + umbrella.description + ".");
 
 // Let's say we have a file addFive.js
 // function addFive(val) {
-//   return val + 5;
+// return val + 5;
 // }
 // module.exports = addFive;
 
@@ -1302,16 +1302,16 @@ console.log("I will probably need a " + umbrella.description + ".");
 // This creates a package.json file like the following:
 
 // {
-//   "name": "javascript",
-//   "version": "1.0.0",
-//   "description": "To install dependencies:",
-//   "main": "javascript.js",
-//   "scripts": {
-//     "test": "echo \"Error: no test specified\" && exit 1"
-//   },
-//   "keywords": [],
-//   "author": "",
-//   "license": "ISC"
+// "name": "javascript",
+// "version": "1.0.0",
+// "description": "To install dependencies:",
+// "main": "javascript.js",
+// "scripts": {
+// "test": "echo \"Error: no test specified\" && exit 1"
+// },
+// "keywords": [],
+// "author": "",
+// "license": "ISC"
 // }
 
 // npm install --save-dev jest
@@ -1325,7 +1325,7 @@ console.log("I will probably need a " + umbrella.description + ".");
 // const addFive = require("./addFive");
 
 // test("returns the number plus 5", () => {
-//   expect(addFive(1)).toBe(6);
+// expect(addFive(1)).toBe(6);
 // });
 
 // -------------
@@ -1337,13 +1337,13 @@ console.log("I will probably need a " + umbrella.description + ".");
 // > javascript@1.0.0 test
 // > jest
 
-//  PASS  ./addFive.test.js
-//   ✓ returns the number plus 5 (3 ms)
+// PASS ./addFive.test.js
+// ✓ returns the number plus 5 (3 ms)
 
 // Test Suites: 1 passed, 1 total
-// Tests:       1 passed, 1 total
-// Snapshots:   0 total
-// Time:        0.315 s, estimated 1 s
+// Tests: 1 passed, 1 total
+// Snapshots: 0 total
+// Time: 0.315 s, estimated 1 s
 // Ran all test suites.
 
 // Note
